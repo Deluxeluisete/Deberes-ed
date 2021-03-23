@@ -1,0 +1,6 @@
+Tenemos un usuario , el cual tiene  una asociacion bidireccional con diferentes metodos , uno de ellos seria el metodo acceder el cual tiene una relacion de inclusion ya que para acceder hay q registrarse , ambos son necearios 
+
+Despues tenemos las  asociaciones bidireccionales de usuario con los metodos "ver cursos..." , "configurar entorno" , "consulta..." ,"publicar en el foro","descargar material" es una asociacion 
+
+Por ultimo tenemos el metodo entregar resultados tiene una relacion de generalizacion con subir archivo y con introducir texto asi que hay herencia
+ 

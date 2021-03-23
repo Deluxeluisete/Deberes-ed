@@ -1,0 +1,54 @@
+@startuml ejercicio2
+class AgenciaInmobiliaria
+{
+
+}
+class SistemaWeb
+{
+    -SeleccionarEntidadBancaria
+    --ContactarEntidadBnacaria    
+}
+AgenciaInmobiliaria -- SistemaWeb
+SistemaWeb --comprador
+SistemaWeb -- vendedor
+vendedor --> Inmueble
+vendedor --> ventas
+ventas ^-- VentasCerradas
+ventas ^-- VentasAbiertas
+comprador <-- Inmueble
+comprador .. oferta
+vendedor .. contraoferta
+
+class vendedor
+{
+    -BuscarInmueble
+    -ListarDatos
+    
+}
+class Inmueble
+{
+    -Datos
+    -SeleccionarAgente
+    
+}
+class ventas
+{
+
+
+}
+class VentasCerradas{
+
+}
+class VentasAbiertas{
+
+}
+class comprador{
+-SolicitarPrestamo
+}
+class oferta{
+
+}
+class contraoferta{
+
+}
+@enduml

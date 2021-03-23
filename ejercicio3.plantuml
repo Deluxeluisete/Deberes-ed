@@ -1,0 +1,60 @@
+@startuml ejercicio3
+class Sistema{
+
+}
+class Cliente{
+    
+}
+class Login{
+    
+}
+class RealizarPedido{
+    
+}
+class MostrarInformacion{
+    
+}
+class SistemaExInventarios{
+    -ActualizarInventario
+}
+class DevolverProducto{
+    
+}
+class CancelarPedido{
+    
+}
+class ConsultarPedido{
+    
+}
+class SistemaExContabilidad{
+    -ActualizarContabilidad
+}
+class Reclamaciones{
+    
+}
+class AtencionCliente{
+    
+}
+class ConsultarReclamacion{
+    
+}
+class Informe{
+
+}
+Cliente -- Login
+Login --> Sistema
+Sistema -- RealizarPedido
+Sistema -- DevolverProducto
+Sistema --CancelarPedido
+Sistema -- ConsultarPedido
+DevolverProducto -->SistemaExInventarios
+DevolverProducto -->SistemaExContabilidad
+RealizarPedido .. MostrarInformacion
+MostrarInformacion --> SistemaExInventarios
+Sistema -- Reclamaciones
+Reclamaciones--> AtencionCliente
+AtencionCliente -- Informe
+Informe -- ConsultarReclamacion
+Sistema ..ConsultarReclamacion
+
+@enduml
